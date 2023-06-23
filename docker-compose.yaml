@@ -1,0 +1,29 @@
+version: "3.7"
+
+services: 
+
+  web:
+    image: httpd
+    container_name: apache
+    restart: always
+    ports:
+    - 80:80
+    - 443:443
+    volumes:
+      #- ./html:/usr/local/apache2/htdocs
+      #- ./conf:/usr/local/apache2/conf
+      - httpdconf:/usr/local/apache2/conf
+      - httpdhtml:/usr/local/apache2/htdocs  
+    networks:
+      - container
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+
+volumes:
+  httpdconf:
+  httpdhtml:
+
+networks:
+  container:
+    driver: bridge
