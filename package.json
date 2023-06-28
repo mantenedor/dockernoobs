@@ -1,0 +1,9 @@
+{
+  "name" : "dockernoobs",
+  "dependencies" : {
+    "bar" : "0.1.x"
+  },
+  "scripts": {
+    "start" : "node app.js"
+  }
+}

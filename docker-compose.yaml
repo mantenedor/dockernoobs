@@ -2,13 +2,12 @@ version: "3.7"
 
 services: 
 
-  proxy:
+  proxy_apache:
     image: httpd
-    container_name: apache
+    container_name: proxy
     restart: always
     ports:
     - 80:80
-    - 443:443
     volumes:
       #- ./html:/usr/local/apache2/htdocs
       #- ./conf:/usr/local/apache2/conf
@@ -26,7 +25,8 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./app:app.js
+      - ./app.js:/home/node/app/app.js
+      - ./package.json:/home/node/app/package.json
     ports:
       - 3000:3000/tcp
     command: "npm start"
