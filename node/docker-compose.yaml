@@ -2,7 +2,7 @@ version: "3.7"
 
 services: 
 
-  proxy_apache:
+  proxy:
     image: httpd
     container_name: proxy
     restart: always
@@ -10,7 +10,7 @@ services:
     - 80:80
     volumes:
       #- ./html:/usr/local/apache2/htdocs
-      #- ./conf:/usr/local/apache2/conf
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
       - httpdconf:/usr/local/apache2/conf
       - httpdhtml:/usr/local/apache2/htdocs  
     networks:
@@ -30,6 +30,8 @@ services:
     ports:
       - 3000:3000/tcp
     command: "npm start"
+    networks:
+      - container
 
 volumes:
   httpdconf:
