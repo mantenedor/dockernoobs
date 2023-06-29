@@ -7,7 +7,7 @@
 docker compose up -d
 ```
 4. O node executará na porta 3000;
-5. A apache fazo o proxy para backend na porta 80;
+5. A apache faz o proxy para backend na porta 80;
 6. Acesse o http://ip_da_maquina_hospedeira. A imagem mensagem "hello world!" deve aparecer.
 7. Aponte o volume do node em "docker-compose.yaml" para sua aplicação, onde, o valor antes dos ":"(dois pontos) correspondem ao local da aplicação na máquina hospedeira e o valor depois dos ":" corresponde ao local de destino dentro do container. Utilize smepre caminhos absolutos:
 
