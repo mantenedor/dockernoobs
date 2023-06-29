@@ -1,4 +1,4 @@
-# nodejs com apache proxy
+# nodejs com Apache proxy
 
 1. Clone o projeto;
 2. Certifique-se de que não haja nenhum serviço executando nas portas 80,443 e 3000
