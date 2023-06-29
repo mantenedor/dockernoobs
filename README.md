@@ -15,3 +15,12 @@ docker compose up -d
 
    ![image](https://github.com/mantenedor/dockernoobs/assets/5191875/21615309-97f5-48a8-b0f1-6f8b84b2d1c1)
 
+Utilize o comando abaixo para parar os containers:
+```
+docker compose down
+```
+Utilize o comando abaixo para eliminar objetos do docker orfãos:
+```
+docker system prune --all --volumes --force
+```
+Objetos em execução serão mantidos.
