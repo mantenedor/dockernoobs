@@ -3,8 +3,8 @@
 Só para noobs.
 
 1. Clone o projeto;
-2. Certifique-se de que não haja nenhum serviçõ executando nas portas 80,443 e 3000
-3. Apartir do diretório "node" Execute:
+2. Certifique-se de que não haja nenhum serviço executando nas portas 80,443 e 3000
+3. A partir do diretório "node" Execute:
 ```
 docker compose up -d
 ```
