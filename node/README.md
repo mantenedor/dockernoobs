@@ -11,7 +11,7 @@ docker compose up -d
 6. Acesse o http://ip_da_maquina_hospedeira. A mensagem "Funfa!" deve aparecer.
 7. Aponte o volume do node em "docker-compose.yaml" para sua aplicação, onde, o valor antes dos ":"(dois pontos) correspondem ao local da aplicação na máquina hospedeira e o valor depois dos ":" corresponde ao local de destino dentro do container. Utilize smepre caminhos absolutos:
 
-![Alt text](image.png)
+![image](https://github.com/mantenedor/dockernoobs/assets/5191875/39d26f4c-4c16-48f1-bce0-be62912a0bec)
 
 Utilize o comando abaixo para parar os containers:
 ```
