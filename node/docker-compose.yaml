@@ -10,10 +10,10 @@ services:
     - 80:80
     - 443:443
     volumes:
-      #- ./html:/usr/local/apache2/htdocs
-      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
-      - httpdconf:/usr/local/apache2/conf
-      - httpdhtml:/usr/local/apache2/htdocs  
+      - ./httpd/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./httpd/conf//httpd-ssl.conf:/usr/local/apache2/conf/extra/httpd-ssl.conf
+      - ./certs/server.crt:/usr/local/apache2/conf/server.crt
+      - ./certs/server.key:/usr/local/apache2/conf/server.key  
     networks:
       - container
     dns:
@@ -26,8 +26,8 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./app.js:/home/node/app/app.js
-      - ./package.json:/home/node/app/package.json
+      - ./workdir/app.js:/home/node/app/app.js
+      - ./workdir/package.json:/home/node/app/package.json
     ports:
       - 3000:3000/tcp
     command: "npm start"
