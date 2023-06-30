@@ -22,12 +22,11 @@ services:
   node:
     image: "node:19"
     user: "node"
-    working_dir: /home/node/app
+    working_dir: /opt/node
     environment:
       - NODE_ENV=production
     volumes:
-      - ./workdir/app.js:/home/node/app/app.js
-      - ./workdir/package.json:/home/node/app/package.json
+      - ./workdir/:/opt/node
     ports:
       - 3000:3000/tcp
     command: "npm start"
