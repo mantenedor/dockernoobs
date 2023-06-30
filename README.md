@@ -2,7 +2,7 @@
 
 Só para noobs.
 
-Você pode executar esse conteúdo aqui no github utilizando o Codespaces:
+Você pode executar este conteúdo aqui no github, utilizando o Codespaces:
 
 ![image](https://github.com/mantenedor/dockernoobs/assets/5191875/4ff3a537-d87a-402f-9fca-d2a6e9e3dda2)
 
