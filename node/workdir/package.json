@@ -1,7 +1,8 @@
 {
   "name" : "dockernoobs",
   "dependencies" : {
-    "bar" : "0.1.x"
+    "bar" : "0.1.x",
+    "express": "^4.12.3"
   },
   "scripts": {
     "start" : "node app.js"

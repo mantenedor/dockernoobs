@@ -29,7 +29,7 @@ services:
       - ./workdir/:/opt/node
     ports:
       - 3000:3000/tcp
-    command: "npm start"
+    command: /bin/bash -c "npm install && npm start"
     networks:
       - container
 
