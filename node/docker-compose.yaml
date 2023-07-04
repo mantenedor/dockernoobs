@@ -10,10 +10,10 @@ services:
     - 80:80
     - 443:443
     volumes:
-      - ./httpd/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
-      - ./httpd/conf/httpd-ssl.conf:/usr/local/apache2/conf/extra/httpd-ssl.conf
-      - ./certs/server.crt:/usr/local/apache2/conf/server.crt
-      - ./certs/server.key:/usr/local/apache2/conf/server.key  
+      - ${HTTPD_CONF}:/usr/local/apache2/conf/httpd.conf
+      - ${HTTPD_SSL_CONF}:/usr/local/apache2/conf/extra/httpd-ssl.conf
+      - ${SSL_CERT}:/usr/local/apache2/conf/server.crt
+      - ${SSL_KEY}:/usr/local/apache2/conf/server.key  
     networks:
       - container
     dns:
