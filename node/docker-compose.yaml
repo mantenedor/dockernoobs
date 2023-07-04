@@ -21,12 +21,12 @@ services:
       - ${DNS2}
   node:
     image: "node:19"
-    user: "node"
+    user: ${NODE_USER}
     working_dir: ${WORKDIR}
     environment:
       - NODE_ENV=production
     volumes:
-      - ./workdir/:/opt/node
+      - ./workdir/:${WORKDIR}
     ports:
       - 3000:3000/tcp
     command: /bin/bash -c "npm install && npm start"
