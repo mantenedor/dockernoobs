@@ -26,7 +26,7 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
-      - ./workdir/:${WORKDIR}
+      - ${WORKDIR}:${WORKDIR}
     ports:
       - 3000:3000/tcp
     command: /bin/bash -c "npm install && npm start"
