@@ -9,14 +9,18 @@ docker compose up -d
 4. O node executará na porta 3000;
 5. A apache faz o proxy para backend na porta 80 e 443;
 6. Acesse o http://ip_da_maquina_hospedeira. A mensagem "Funfa!" deve aparecer.
-7. Aponte o volume do node em "docker-compose.yaml" para sua aplicação, onde, o valor antes dos ":"(dois pontos) correspondem ao local da aplicação na máquina hospedeira e o valor depois dos ":" corresponde ao local de destino dentro do container. Utilize smepre caminhos absolutos:
+7. Crie e/ou modifique variáveis de ambiente no "docker-compose.yaml":
 
-![image](https://github.com/mantenedor/dockernoobs/assets/5191875/39d26f4c-4c16-48f1-bce0-be62912a0bec)
+![image](https://github.com/mantenedor/dockernoobs/assets/5191875/abcf5b54-ccbe-472f-8f7b-9693062a705f)
+
+Atribua os valores das variáveis criadas/modificadas no arquivo ".env":
+
+![image](https://github.com/mantenedor/dockernoobs/assets/5191875/cf6bdb76-f156-4ae2-8109-4fe519a08f38)
 
 8. Gere um certificado auto assinado, para testar, seguindo estes tutorial: https://devopscube.com/create-self-signed-certificates-openssl/
 9. Mapeie os certificados via volume:
 
-![image](https://github.com/mantenedor/dockernoobs/assets/5191875/2a3ffe85-c4a6-4d60-9415-bc0a9bf46da5)
+![image](https://github.com/mantenedor/dockernoobs/assets/5191875/b3857f1f-9b7b-4939-a079-cc999a690482)
 
 Utilize o comando abaixo para parar os containers:
 ```
