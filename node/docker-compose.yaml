@@ -17,12 +17,12 @@ services:
     networks:
       - container
     dns:
-      - 8.8.8.8
-      - 1.1.1.1
+      - ${DNS1}
+      - ${DNS2}
   node:
     image: "node:19"
     user: "node"
-    working_dir: /opt/node
+    working_dir: ${WORKDIR}
     environment:
       - NODE_ENV=production
     volumes:
