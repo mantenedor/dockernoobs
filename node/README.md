@@ -25,8 +25,10 @@
    docker compose up -d
    ```
    O node executará na porta 3000;
-   A apache faz o proxy para backend na porta 80 e 443;
-9. Acesse o http://ip_da_maquina_hospedeira. A mensagem "Funfa!" deve aparecer.
+   
+   O apache faz o proxy para o backend nas porta 80 e 443.
+   
+10. Acesse o http://ip_da_maquina_hospedeira. A mensagem "Funfa!" deve aparecer.
 
 Utilize o comando abaixo para parar os containers:
 ```
