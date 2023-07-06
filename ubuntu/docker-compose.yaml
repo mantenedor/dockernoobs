@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+
+  os:
+    build: ./
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    container_name: ubuntu
+    restart: always
+    ports:
+      - 3478:3478/udp
+      - 3479:3479/udp
+      - 8089:8089/udp
+      - 51821:51821/udp
+      - 51822:51822/udp
+      - 51823:51823/udp
+      - 80:80/tcp
+      - 443:443/tcp
+    volumes:
+      - ./opt:/opt
+    networks: 
+      - netmaker
+      
+networks:
+  netmaker:
+    driver: bridge
