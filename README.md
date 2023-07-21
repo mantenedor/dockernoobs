@@ -13,3 +13,17 @@ Você pode executar este conteúdo aqui no github, utilizando o Codespaces:
 ![image](https://github.com/mantenedor/dockernoobs/assets/5191875/caa2353a-f073-4926-9394-5d855538bd85)
 
 ![image](https://github.com/mantenedor/dockernoobs/assets/5191875/f7e42b73-f2bd-478d-8d55-1e9d415e0296)
+
+Suba os containers com o comando abaixo:
+```
+docker compose up -d
+```
+Pare os containers com o comando abaixo:
+```
+docker compose down
+```
+Utilize o comando abaixo para eliminar objetos do docker orfãos:
+```
+docker system prune --all --volumes --force
+```
+Objetos em execução serão mantidos.
