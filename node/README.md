@@ -27,13 +27,3 @@ O node executará na porta 3000;
 O apache faz o proxy para o backend nas porta 80 e 443.
    
 10. Acesse o http://ip_da_maquina_hospedeira. A mensagem "Funfa!" deve aparecer.
-
-Utilize o comando abaixo para parar os containers:
-```
-docker compose down
-```
-Utilize o comando abaixo para eliminar objetos do docker orfãos:
-```
-docker system prune --all --volumes --force
-```
-Objetos em execução serão mantidos.
