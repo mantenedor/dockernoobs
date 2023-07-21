@@ -8,7 +8,7 @@ Cone o projeto:
 ```
 git clone https://github.com/mantenedor/dockernoobs.git
 ```
-Suba os containers com o comando abaixo:
+A partir do diretório onde consta o arquivo "docker-compose.yaml", suba os containers com o comando abaixo:
 ```
 docker compose up -d
 ```
